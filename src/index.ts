@@ -13,6 +13,7 @@ const PORT = (process.env.PORT || 5000) as number;
 
 // health check
 fastify.get("/ping", async () => "pong\n");
+
 fastify.register(cors, { origin: "*" });
 fastify.register(userRoutes, { prefix: "/users" });
 
